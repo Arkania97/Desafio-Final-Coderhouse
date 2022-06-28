@@ -1,0 +1,77 @@
+.footer {
+    background-image: url(../assets/texture2.png);
+    opacity: 0.8;
+    min-height: 150px;
+    width: 100%;
+    @media screen and (max-width: 500px) {
+        min-height: 200px;
+    }
+
+    p {
+        color: $TextColor;
+        @include SecondaryText;
+        @media screen and (max-width: 586px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .logo-container {
+        flex-direction: column;
+        @include SuperCenter;
+        transition: .3s;
+        
+
+        &:hover {
+            transform: scale(1.1);
+
+            color: $SecondaryColor;
+        }
+
+        a {
+            color: $TextColor;
+            @include SecondaryText;
+            transition: .3s;
+            
+
+            &:hover {
+                color: $SecondaryColor;
+            }
+            
+
+        }
+        
+
+        .logo-box {
+            img {
+                border-radius: 50%;
+                width: 45%;
+                @media screen and (max-width: 768px) {
+                    width: 30%;
+                }
+            }
+
+        }
+        .footer-anchor {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    .nav {
+        .nav-item {
+            .nav-link {
+                @include SecondaryText;
+                transition: .3s;
+                @media screen and (max-width: 364px) {
+                    font-size: 1.5rem;
+                }
+                
+
+                &:hover {
+                    border-bottom: 2px solid #fff;
+                }
+            }
+        }
+    }
+}

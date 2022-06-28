@@ -1,0 +1,75 @@
+.carousel {
+    background-color: map-get($index-bg, background-color);
+    background-image: map-get($index-bg, background-image);
+    background-attachment: map-get($index-bg, background-attachment);
+    background-size: map-get($index-bg, background-size);
+
+    .carousel-inner {
+        min-height: 600px;
+        .carousel-heading-box {
+            h4 {
+                @include TitleText;
+                color: $PrimaryColor;
+                transition: .3s;
+
+                &:hover {
+                    color: $SecondaryColor;
+                }
+            }
+
+        }
+
+        .carousel-item {
+            .carousel-card-container {
+                display: flex;
+                justify-content: space-evenly;
+                
+
+                .card {
+                    background-color: transparent;
+                    border: 1px solid $RgbaFilter;
+                    padding: 1rem;
+                    border: 1px solid $PrimaryColor;
+
+                    .card-body {
+                        color: $TextColor;
+                        @include SuperCenterY;
+
+                        p {
+                            @include SecondaryText;
+                            font-size: 2rem;
+                            color: $PrimaryColor;
+                        }
+
+                        .accordion {
+                            background-color: $RgbaFilter;
+                            @include SuperCenterY;
+                            
+                                
+                            margin-bottom: 5rem;
+                            .accordion-item {
+                                background-color: $RgbaFilter;
+                                @include SuperCenterY;
+                                h2 {
+                                    align-self: center;
+
+                                    .accordion-button {
+                                        background-color: $RgbaFilter;
+                                        color: $PrimaryColor;
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                            }
+                            .accordion-body {
+                                color: $TextColor;
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}

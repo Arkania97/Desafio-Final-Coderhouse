@@ -1,0 +1,116 @@
+.body__internal {
+    width: 100%;
+    height: 100vh;
+    background-color: map-get($internal-bg, background-color);
+    background-image: map-get($internal-bg, background-image);
+    background-attachment: map-get($internal-bg, background-attachment);
+    background-size: map-get($internal-bg, background-size);
+
+    .grid__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3.5rem 1fr 3.5rem;
+        grid-template-areas: "header"
+            "main"
+            "footer";
+
+        .header {
+            grid-area: header;
+        }
+
+        .main__internal {
+            grid-area: main;
+
+            &-row {
+                margin-top: 2rem;
+                height: auto;
+
+                
+
+                .banner {
+                    width: 100%;
+                    height: 400px;
+
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        max-height: 400px;
+                        border-radius: 5px;
+                    }
+
+                    h1 {
+                        @include TitleText;
+                        position: absolute;
+                        color: $PrimaryColor;
+                        font-size: 5rem;
+                        transition: .4s;
+                        margin: 0 1rem;
+
+                        &:hover {
+                            color: $TextColor;
+                        }
+                    }
+                }
+            }
+
+            &-row2 {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 600px);
+                grid-gap: 5px;
+
+                @media screen and (max-width:992px) {
+                    @include SuperCenter;
+                    flex-wrap: wrap;
+                }
+                    .card {
+                        background-color: $RgbaFilter;
+                        color: $TextColor;
+                        justify-self: center;
+                        .card-body {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-content: center;
+
+                            h5 {
+                                font-family: 'courgette', cursive;
+                                font-size: 2rem;
+                                transition: .5s;
+                                &:hover {
+                                    color: $SecondaryColor;
+                                }
+                            }
+
+                            p {
+                                @include SecondaryText;
+                            }
+
+                            ul {
+                                li {
+                                    font-size: 1.5rem;
+                                    color: $TextColor;
+                                }
+                            }
+
+                            a {
+                                font-size: 1.5rem;
+                                color: $PrimaryColor;
+                                transition: .3s;
+
+                                &:hover {
+                                    color: $TextColor;
+                                    background-color: $PrimaryColor;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    }
+}

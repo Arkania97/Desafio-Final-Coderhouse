@@ -1,0 +1,112 @@
+.header {
+    z-index: 1;
+    nav {
+        .navbar-container {
+            .navbar-brand {
+                @include TitleText;
+                font-size: 2.5rem;
+                transition: .3s;
+                &:hover {
+                    color: $PrimaryColor;
+                }
+            }
+            .collapse {
+                
+                .navbar-nav {
+                    
+                    .dropdown {
+                        
+                        .nav-link {
+                            @include SecondaryText;
+                            color: $TextColor;
+                            transition: .3s;
+                            &:hover {
+                                color: $PrimaryColor;
+                            }
+                        }
+                        .dropdown-menu {
+                            min-width: 145px;
+                            background-color: $RgbaFilter;
+                            
+                            
+                            li>a {
+                                font-family: 'poppins', sans-serif;
+                                font-size: 1.7rem;
+                                font-weight: 500;
+                                color: $TextColor;
+                                transition: .3s;
+                                &:hover {
+                                    color: $SecondaryColor;
+                                }
+                            }
+                        }
+                    }
+                    .socialmedia-box {
+                        min-height: 30px;
+                        @include SuperCenter;
+                        align-items: center;
+                        @media screen and (max-width: 992px) {
+                            justify-content: start;
+                        }
+                        
+                        a > i {
+                            color: $TextColor;
+                            transition :.3s;
+                            font-size: 1.5rem;
+                            align-self: end;
+                            &:hover {
+                                color: $SecondaryColor;
+                                transform: scale(1.5);
+                            }
+                        }
+                    }
+                    .nav-btn-container {
+                        justify-content: space-around;
+                        align-content: center;
+                        
+                        
+                        .nav-btn { //btns de Apparel, Artists y Support
+                            @include SuperCenterY;
+                            justify-content: center;
+                            margin: auto 1rem;
+                            transition: .3s;
+                            @media screen and (max-width: 992px) {
+                                flex-direction: row;
+                                display: inline-flex;
+                                max-width: 100px;
+                            }
+                            a {
+                                @include SecondaryText;
+                                font-size: 1.2rem;
+                                color: $PrimaryColor;
+                                
+                                
+                                &:hover {
+                                    border: 1px solid $SecondaryColor;
+                                    background-color: $RgbaFilter;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+                form {
+                    min-width: 250px;
+                    @media screen and (max-width: 992px) {
+                        width: auto;
+                    }
+                    button {
+                        color: $PrimaryColor;
+                        border: 1px solid $PrimaryColor;
+                        transition: .3s;
+                        @include SecondaryText;
+                        font-size: 1.2rem;
+                        &:hover {
+                            border: 1px solid $SecondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

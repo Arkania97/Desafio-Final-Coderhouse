@@ -1,0 +1,30 @@
+@mixin TitleText(){
+    font-family: 'Courgette', cursive;
+    font-size: 3rem;
+    color: $TextColor;
+}
+
+@mixin SecondaryText(){
+    font-family: 'poppins', sans-serif;
+    font-size: 2rem;
+    color: $TextColor;
+}
+
+@mixin TerciaryText(){
+    font-family: 'Potta One', cursive;
+    font-size: 3rem;
+    color: $TextColor;
+}
+
+@mixin SuperCenter() {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin SuperCenterY {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
